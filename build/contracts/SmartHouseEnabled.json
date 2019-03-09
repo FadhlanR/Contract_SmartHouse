@@ -1,0 +1,753 @@
+{
+  "contractName": "SmartHouseEnabled",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_contractManager",
+          "type": "address"
+        }
+      ],
+      "name": "setContractManager",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b5061019d806100206000396000f3fe608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063d8dbe4c914610046575b600080fd5b34801561005257600080fd5b506100956004803603602081101561006957600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506100af565b604051808215151515815260200191505060405180910390f35b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff161415801561011957508173ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614155b15610127576000905061016c565b816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550600190505b91905056fea165627a7a7230582003eba61ad2b49ffa04643b0cb717c1b096b4b3f151ff6a63e41eb988249328c80029",
+  "deployedBytecode": "0x608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063d8dbe4c914610046575b600080fd5b34801561005257600080fd5b506100956004803603602081101561006957600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506100af565b604051808215151515815260200191505060405180910390f35b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff161415801561011957508173ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614155b15610127576000905061016c565b816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550600190505b91905056fea165627a7a7230582003eba61ad2b49ffa04643b0cb717c1b096b4b3f151ff6a63e41eb988249328c80029",
+  "sourceMap": "145:231:9:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;145:231:9;;;;;;;",
+  "deployedSourceMap": "145:231:9:-;;;;;;;;;;;;;;;;;;;;;;;;187:251:1;;8:9:-1;5:2;;;30:1;27;20:12;5:2;187:251:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;187:251:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;259:4;302:3;274:32;;:16;:32;;;;:66;;;;;324:16;310:30;;:10;:30;;;;274:66;271:101;;;359:5;352:12;;;;271:101;398:16;380:15;;:34;;;;;;;;;;;;;;;;;;428:4;421:11;;187:251;;;;:::o",
+  "source": "pragma solidity <=0.5.0;\r\n//Author: Fadhlan Ridhwanallah\r\n\r\nimport './CMCEnabled.sol';\r\nimport './ContractProvider.sol';\r\n\r\n//Application Logic\r\ncontract SmartHouseEnabled is CMCEnabled {\r\n  function isSmartHouse() internal view returns (bool) {\r\n    address smartHouse = ContractProvider(contractManager).contracts(\"smarthouse\");\r\n    return msg.sender == smartHouse;\r\n  }\r\n}\r\n",
+  "sourcePath": "/Users/fadhlan.ridhwanallah/Documents/Project/TOKOIN/Contract_SmartHouse/contracts/SmartHouseEnabled.sol",
+  "ast": {
+    "absolutePath": "/Users/fadhlan.ridhwanallah/Documents/Project/TOKOIN/Contract_SmartHouse/contracts/SmartHouseEnabled.sol",
+    "exportedSymbols": {
+      "SmartHouseEnabled": [
+        1721
+      ]
+    },
+    "id": 1722,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1696,
+        "literals": [
+          "solidity",
+          "<=",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:9"
+      },
+      {
+        "absolutePath": "/Users/fadhlan.ridhwanallah/Documents/Project/TOKOIN/Contract_SmartHouse/contracts/CMCEnabled.sol",
+        "file": "./CMCEnabled.sol",
+        "id": 1697,
+        "nodeType": "ImportDirective",
+        "scope": 1722,
+        "sourceUnit": 123,
+        "src": "60:26:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/fadhlan.ridhwanallah/Documents/Project/TOKOIN/Contract_SmartHouse/contracts/ContractProvider.sol",
+        "file": "./ContractProvider.sol",
+        "id": 1698,
+        "nodeType": "ImportDirective",
+        "scope": 1722,
+        "sourceUnit": 140,
+        "src": "88:32:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1699,
+              "name": "CMCEnabled",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 122,
+              "src": "175:10:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CMCEnabled_$122",
+                "typeString": "contract CMCEnabled"
+              }
+            },
+            "id": 1700,
+            "nodeType": "InheritanceSpecifier",
+            "src": "175:10:9"
+          }
+        ],
+        "contractDependencies": [
+          122
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1721,
+        "linearizedBaseContracts": [
+          1721,
+          122
+        ],
+        "name": "SmartHouseEnabled",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1719,
+              "nodeType": "Block",
+              "src": "244:129:9",
+              "statements": [
+                {
+                  "assignments": [
+                    1706
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 1706,
+                      "name": "smartHouse",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 1719,
+                      "src": "251:18:9",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 1705,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "251:7:9",
+                        "stateMutability": "nonpayable",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 1713,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "736d617274686f757365",
+                        "id": 1711,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "316:12:9",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_65314387e26b60ea0fa89922c236c4aac46f9c11188c1f73d6083a34f915d0c7",
+                          "typeString": "literal_string \"smarthouse\""
+                        },
+                        "value": "smarthouse"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_65314387e26b60ea0fa89922c236c4aac46f9c11188c1f73d6083a34f915d0c7",
+                          "typeString": "literal_string \"smarthouse\""
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 1708,
+                            "name": "contractManager",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 93,
+                            "src": "289:15:9",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 1707,
+                          "name": "ContractProvider",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 139,
+                          "src": "272:16:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_ContractProvider_$139_$",
+                            "typeString": "type(contract ContractProvider)"
+                          }
+                        },
+                        "id": 1709,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "272:33:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ContractProvider_$139",
+                          "typeString": "contract ContractProvider"
+                        }
+                      },
+                      "id": 1710,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "contracts",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 138,
+                      "src": "272:43:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_pure$_t_bytes32_$returns$_t_address_$",
+                        "typeString": "function (bytes32) pure external returns (address)"
+                      }
+                    },
+                    "id": 1712,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "272:57:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "251:78:9"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 1717,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1714,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2826,
+                        "src": "343:3:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 1715,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "343:10:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 1716,
+                      "name": "smartHouse",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1706,
+                      "src": "357:10:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "343:24:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 1704,
+                  "id": 1718,
+                  "nodeType": "Return",
+                  "src": "336:31:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1720,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isSmartHouse",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1701,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "212:2:9"
+            },
+            "returnParameters": {
+              "id": 1704,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1703,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1720,
+                  "src": "238:4:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1702,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "238:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "237:6:9"
+            },
+            "scope": 1721,
+            "src": "191:182:9",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1722,
+        "src": "145:231:9"
+      }
+    ],
+    "src": "0:378:9"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/fadhlan.ridhwanallah/Documents/Project/TOKOIN/Contract_SmartHouse/contracts/SmartHouseEnabled.sol",
+    "exportedSymbols": {
+      "SmartHouseEnabled": [
+        1721
+      ]
+    },
+    "id": 1722,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1696,
+        "literals": [
+          "solidity",
+          "<=",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:9"
+      },
+      {
+        "absolutePath": "/Users/fadhlan.ridhwanallah/Documents/Project/TOKOIN/Contract_SmartHouse/contracts/CMCEnabled.sol",
+        "file": "./CMCEnabled.sol",
+        "id": 1697,
+        "nodeType": "ImportDirective",
+        "scope": 1722,
+        "sourceUnit": 123,
+        "src": "60:26:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/fadhlan.ridhwanallah/Documents/Project/TOKOIN/Contract_SmartHouse/contracts/ContractProvider.sol",
+        "file": "./ContractProvider.sol",
+        "id": 1698,
+        "nodeType": "ImportDirective",
+        "scope": 1722,
+        "sourceUnit": 140,
+        "src": "88:32:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1699,
+              "name": "CMCEnabled",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 122,
+              "src": "175:10:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CMCEnabled_$122",
+                "typeString": "contract CMCEnabled"
+              }
+            },
+            "id": 1700,
+            "nodeType": "InheritanceSpecifier",
+            "src": "175:10:9"
+          }
+        ],
+        "contractDependencies": [
+          122
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1721,
+        "linearizedBaseContracts": [
+          1721,
+          122
+        ],
+        "name": "SmartHouseEnabled",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1719,
+              "nodeType": "Block",
+              "src": "244:129:9",
+              "statements": [
+                {
+                  "assignments": [
+                    1706
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 1706,
+                      "name": "smartHouse",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 1719,
+                      "src": "251:18:9",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 1705,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "251:7:9",
+                        "stateMutability": "nonpayable",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 1713,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "736d617274686f757365",
+                        "id": 1711,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "316:12:9",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_65314387e26b60ea0fa89922c236c4aac46f9c11188c1f73d6083a34f915d0c7",
+                          "typeString": "literal_string \"smarthouse\""
+                        },
+                        "value": "smarthouse"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_65314387e26b60ea0fa89922c236c4aac46f9c11188c1f73d6083a34f915d0c7",
+                          "typeString": "literal_string \"smarthouse\""
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 1708,
+                            "name": "contractManager",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 93,
+                            "src": "289:15:9",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 1707,
+                          "name": "ContractProvider",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 139,
+                          "src": "272:16:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_ContractProvider_$139_$",
+                            "typeString": "type(contract ContractProvider)"
+                          }
+                        },
+                        "id": 1709,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "272:33:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ContractProvider_$139",
+                          "typeString": "contract ContractProvider"
+                        }
+                      },
+                      "id": 1710,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "contracts",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 138,
+                      "src": "272:43:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_pure$_t_bytes32_$returns$_t_address_$",
+                        "typeString": "function (bytes32) pure external returns (address)"
+                      }
+                    },
+                    "id": 1712,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "272:57:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "251:78:9"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 1717,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1714,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2826,
+                        "src": "343:3:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 1715,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "343:10:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 1716,
+                      "name": "smartHouse",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1706,
+                      "src": "357:10:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "343:24:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 1704,
+                  "id": 1718,
+                  "nodeType": "Return",
+                  "src": "336:31:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1720,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isSmartHouse",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1701,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "212:2:9"
+            },
+            "returnParameters": {
+              "id": 1704,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1703,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1720,
+                  "src": "238:4:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1702,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "238:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "237:6:9"
+            },
+            "scope": 1721,
+            "src": "191:182:9",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1722,
+        "src": "145:231:9"
+      }
+    ],
+    "src": "0:378:9"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.2",
+  "updatedAt": "2019-03-09T15:22:53.614Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
